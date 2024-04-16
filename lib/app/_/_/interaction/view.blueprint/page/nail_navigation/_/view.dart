@@ -16,15 +16,19 @@ class NewViewState extends State<NewView> with StateMother {
   @override
   Widget build(BuildContext context) {
     return JuneBuilder(
-          () => NailNaviVM(),
+      () => NailNaviVM(),
       builder: (vmNailNavi) => Scaffold(
         backgroundColor: Theme.of(context).colorScheme.background,
         body: IndexedStack(
           index: vmNailNavi.naviIndex,
           children: [
             //////////////////////////////////////////////////////////////////
-            Container(color: Colors.green,),
-            Container(color: Colors.blue,),
+            Container(
+              color: Colors.green,
+            ),
+            Container(
+              color: Colors.blue,
+            ),
             //////////////////////////////////////////////////////////////////
           ],
         ),
@@ -53,7 +57,10 @@ class NewViewState extends State<NewView> with StateMother {
                             BlendMode.srcIn),
                         width: 20,
                         height: 20,
-                      ).padding(all: 10).backgroundColor(Colors.transparent).gestures(
+                      )
+                          .padding(all: 10)
+                          .backgroundColor(Colors.transparent)
+                          .gestures(
                         onTap: () {
                           clickLeftNaviEvent(context);
                         },
@@ -70,7 +77,10 @@ class NewViewState extends State<NewView> with StateMother {
                             BlendMode.srcIn),
                         width: 20,
                         height: 20,
-                      ).padding(all: 10).backgroundColor(Colors.transparent).gestures(onTap: () {
+                      )
+                          .padding(all: 10)
+                          .backgroundColor(Colors.transparent)
+                          .gestures(onTap: () {
                         clickRightNaviEvent(context);
                       }),
                     ],
@@ -110,8 +120,7 @@ class NewViewState extends State<NewView> with StateMother {
             ),
           ],
         ).height(65).width(200),
-        floatingActionButtonLocation:
-        FloatingActionButtonLocation.centerFloat,
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
   }

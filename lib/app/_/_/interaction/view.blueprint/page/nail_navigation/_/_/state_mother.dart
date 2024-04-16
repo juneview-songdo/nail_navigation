@@ -7,9 +7,9 @@ import '../../vm/_/action/change_index.dart';
 
 @JuneViewMother()
 mixin StateMother<T extends StatefulWidget> on State<T> {
-  bool ignoreReadyView() => false;
-
-  Future<void> readyState(BuildContext context) async {}
+  Function? readyState(BuildContext context) {
+    return null;
+  }
 
   Widget loadingWidget() {
     return CupertinoActivityIndicator().center();
